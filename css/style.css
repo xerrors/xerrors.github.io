@@ -1,3 +1,88 @@
 :root {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    width: 90%;
+    max-width: 880px;
+    margin: 50px auto;
+}
+
+header {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+header img {
+    margin: 0;
+    height: 200px;
+}
+
+header p.actions {
+    margin: 0;
+    align-self: center;
+    font-size: 1.5em;
+}
+
+header p.actions button {
+    margin-right: 10px;
+    padding: 6px 8px;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid #3367d1;
+    color: #3367d1;
+}
+
+header p.actions button > a {
+    color: #3367d1;
+    text-decoration: none;
+}
+
+header p.actions button:hover {
+    background-color: #3367d1;
+}
+
+header p.actions button:hover > a {
+    color: white;
+}
+
+ul.pub a {
+    color: #3367d1;
+}
+
+/* common overrides */
+h2 {
+    margin: 30px 0 10px 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #3367d1;
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header img {
+        height: auto;
+        max-height: 300px;
+        margin: 20px auto 20px 0;
+    }
 }
