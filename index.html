@@ -7,7 +7,7 @@
     <link rel="icon" href="./pics/favicon.png" type="image/png">
 </head>
 <body>
-    <h1 class="name">张文杰 (Wenjie Zhang)</h1>
+    <h1 class="name">张文杰 <span class="eng">Wenjie Zhang</span></h1>
     <header>
         <div class="info">
             <h3>Ph.D. Student (from Fall 2023)</h3>
@@ -38,19 +38,19 @@
         <h2>Publications</h2>
         <ul class="pub">
             <li>
-                <strong>Zhang W</strong>, Song X*, Feng Z, Xu T, Wu X.
-                LabelPrompt: Effective Prompt-based Learning for Relation Classification[J]. arXiv preprint arXiv:2302.08068, 2023.
-                [<a href="https://arxiv.org/abs/2302.08068" target="_blank">abstract</a>]
-                [<a href="https://arxiv.org/pdf/2302.08068" target="_blank">pdf</a>] (Accepted by ACML 2024, CCF-C)
-                <!-- <strong>cite: 8989, IF: 9.8, JCR Q1</strong> -->
+                <a href="https://arxiv.org/abs/2302.08068" target="_blank" rel="noopener noreferrer" class="pub_name">
+                    LabelPrompt: Effective Prompt-based Learning for Relation Classification
+                </a> <br>
+                <strong>Wenjie Zhang</strong>, Xiaoning Song*, Zhenhua Feng, Tianyang Xu, Xiao-jun Wu.<br>
+                Accepted by ACML 2024, CCF-C.
             </li>
             <li>
-                <strong>Zhang W</strong>, Xu T, Hua Y, Feng Z, Song X*.
-                Fastere: a fast framework for entity relation extractions[J]. Data Mining and Knowledge Discovery, 2025, 39(6): 75.
-                [<a href="https://doi.org/10.1007/s10618-025-01146-y" target="_blank">abstract</a>] (Accepted by DMKD, CCF-B, collection of ECML-PKDD 2025)
-            </li>
-            <li>
-                Thinking about what to do next.
+                <a href="https://link.springer.com/article/10.1007/s10618-025-01146-y" target="_blank" rel="noopener noreferrer" class="pub_name">
+                    FastERE: a Fast Framework for Entity Relation Extractions
+                </a> <br>
+                <strong>Wenjie Zhang</strong>, Tianyang Xu, Yang Hua, Zhenhua Feng, Xiaoning Song*.<br>
+                <!-- <span class="badge">Accepted</span> -->
+                Accepted by Data Mining and Knowledge Discovery, CCF-B, collection of ECML-PKDD 2025.
             </li>
         </ul>
 
@@ -101,8 +101,11 @@
         font-size: 2.2rem;
         letter-spacing: 0.2px;
         color: #1a1a1a;
-        /* Modern font stack for better readability and aesthetics */
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', sans-serif;
+    }
+
+    h1.name .eng {
+        font-size: 1.6rem;
+        color: #545454;
     }
 
     header {
@@ -141,7 +144,7 @@
         border: 1.5px solid var(--primary);
         color: var(--primary);
         cursor: pointer;
-        letter-spacing: 0.1px;
+        /* letter-spacing: 0.1px; */
         text-decoration: none;
         transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .02s ease;
         outline: none;
@@ -189,15 +192,15 @@
         text-underline-offset: 2px;
     }
 
-    .bable {
+    .badge {
         display: inline-block;
-        padding: 2px 4px;
+        padding: 0px 4px;
         background-color: #3367d1;
         color: white;
         border-radius: 4px;
         margin-right: 6px;
         font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: small;
+        font-size: 0.8rem;
     }
 
     /* mata-class */
@@ -208,6 +211,7 @@
     .main { color: #3367d1; }
     .bg-main { background-color: #3367d1; }
     .bold { font-weight: bold; }
+    .bg-yellow { background-color: #f5f580; }
 
     /* common overrides */
     h2 {
@@ -250,6 +254,10 @@
     ul.pub {
         list-style: disc;
         padding-left: 20px;
+    }
+
+    ul.pub .pub_name {
+        color: #3367d1;
     }
 
     li {
