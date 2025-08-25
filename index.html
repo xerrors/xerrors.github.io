@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wenjie Zhang (张文杰)</title>
+    <title>张文杰 (Wenjie Zhang)</title>
+    <link rel="icon" href="./pics/favicon.png" type="image/png">
 </head>
 <body>
-    <h1 class="name">Wenjie Zhang (张文杰)</h1>
+    <h1 class="name">张文杰 (Wenjie Zhang)</h1>
     <header>
         <div class="info">
             <h3>Ph.D. Student (from Fall 2023)</h3>
@@ -17,33 +18,36 @@
             </p>
             <p>Email: <span>wenjie.zhang@stu.jiangnan.edu.cn</span></p>
             <p class="actions">
-                <button><a href="https://github.com/xerrors">View My GitHub</a></button>
-                <button><a href="https://scholar.google.com.hk/citations?user=ZwL8FnQAAAAJ">View My Google Scholar</a></button>
+                <a class="btn btn--primary" href="https://github.com/xerrors" target="_blank" rel="noopener noreferrer">View My GitHub</a>
+                <a class="btn" href="https://scholar.google.com.hk/citations?user=ZwL8FnQAAAAJ" target="_blank" rel="noopener noreferrer">View My Google Scholar</a>
             </p>
         </div>
-        <img src="https://xerrors.oss-cn-shanghai.aliyuncs.com/langtime/48fc0f69098ad378db680f711008bf5.jpg" alt="main image">
+        <img src="./pics/wenjie-zhang.jpg" alt="main image">
     </header>
 
     <main>
         <h2>Short Bio</h2>
         <p>
-            I am currently working toward the Ph.D degree in computer science and technology with Jiangnan University, Wuxi, China.
-            My research interests include Latural Language Processing (NLP), Machine Learning (ML), and Entity Relation Rxtraction (ERE).
+            I am currently working toward the Ph.D degree in Software Engineering with Jiangnan University, Wuxi, China.
+            My research interests include Latural Language Processing (NLP), Knowledge Graph (KG), and Entity Relation Rxtraction (ERE).
         </p>
         <p>
-            I'm currently learning Large Language Models (LLMs) and Information Extraction (IE).
+            I'm currently learning Large Language Models (LLMs) and Knowledge Graph (KG).
         </p>
 
         <h2>Publications</h2>
         <ul class="pub">
             <li>
-                <!-- <span class="bable bg-green">arXiv 2023</span>
-                <span class="bable bg-main">CCF-B</span> -->
-                <strong>Zhang W</strong>, Song X, Feng Z, et al.
+                <strong>Zhang W</strong>, Song X*, Feng Z, Xu T, Wu X.
                 LabelPrompt: Effective Prompt-based Learning for Relation Classification[J]. arXiv preprint arXiv:2302.08068, 2023.
                 [<a href="https://arxiv.org/abs/2302.08068" target="_blank">abstract</a>]
-                [<a href="https://arxiv.org/pdf/2302.08068" target="_blank">pdf</a>]
+                [<a href="https://arxiv.org/pdf/2302.08068" target="_blank">pdf</a>] (Accepted by ACML 2024, CCF-C)
                 <!-- <strong>cite: 8989, IF: 9.8, JCR Q1</strong> -->
+            </li>
+            <li>
+                <strong>Zhang W</strong>, Xu T, Hua Y, Feng Z, Song X*.
+                Fastere: a fast framework for entity relation extractions[J]. Data Mining and Knowledge Discovery, 2025, 39(6): 75.
+                [<a href="https://doi.org/10.1007/s10618-025-01146-y" target="_blank">abstract</a>] (Accepted by DMKD, CCF-B, collection of ECML-PKDD 2025)
             </li>
             <li>
                 Thinking about what to do next.
@@ -53,7 +57,7 @@
         <h2>Projects</h2>
         <ul class="pub">
             <li>
-                <strong>Yuxi-Know: </strong>
+                <strong>Yuxi-Know: </strong><a href="https://github.com/xerrors/Yuxi-Know" target="_blank" rel="noopener noreferrer">https://github.com/xerrors/Yuxi-Know</a>
                 A knowledge graph construction and reasoning system.
                 <img src="https://img.shields.io/github/stars/xerrors/Yuxi-Know" alt="Yuxi-Know">
             </li>
@@ -71,8 +75,13 @@
 
 <style>
     :root {
+        background-color: #f5f5f5;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         font-size: 16px;
+        /* theme tokens */
+        --primary: #3367d1;
+        --primary-ink: #1a1a1a;
+        --radius: 4px;
     }
 
     body {
@@ -80,6 +89,20 @@
         width: 90%;
         max-width: 880px;
         margin: 50px auto;
+        color: #222;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Title */
+    h1.name {
+        margin: 0 0 10px 0;
+        font-size: 2.2rem;
+        letter-spacing: 0.2px;
+        color: #1a1a1a;
+        /* Modern font stack for better readability and aesthetics */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', sans-serif;
     }
 
     header {
@@ -87,45 +110,83 @@
         height: auto;
         justify-content: space-between;
         margin: 40px auto;
+        align-items: center;
+        gap: 24px;
     }
 
     header img {
         margin: 0;
         height: 200px;
-        border-radius: 4px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
     header p.actions {
-        margin: 0;
+        margin-top: 20px;
         align-self: center;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
     }
 
-    header p.actions button {
-        margin-right: 10px;
-        padding: 6px 8px;
-        background-color: white;
-        border-radius: 4px;
-        border: 2px solid #3367d1;
-        color: #3367d1;
-    }
-
-    header p.actions button > a {
-        color: #3367d1;
+    /* Buttons */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 12px;
+        background-color: #fff;
+        border-radius: var(--radius);
+        border: 1.5px solid var(--primary);
+        color: var(--primary);
+        cursor: pointer;
+        letter-spacing: 0.1px;
         text-decoration: none;
-        font-size: 1rem
+        transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .02s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', sans-serif;
+
     }
 
-    header p.actions button:hover {
-        background-color: #3367d1;
+    .btn:visited { color: var(--primary); }
+
+    .btn:hover {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+        box-shadow: 0 2px 10px rgba(51, 103, 209, 0.25);
+        text-decoration: none;
     }
 
-    header p.actions button:hover > a {
-        color: white;
+    .btn:active {
+        transform: translateY(0.5px);
+        box-shadow: 0 1px 6px rgba(51, 103, 209, 0.2);
+    }
+
+    .btn:focus-visible {
+        box-shadow: 0 0 0 4px rgba(51, 103, 209, 0.18);
+        text-decoration: none;
+    }
+
+    /* Primary variant for emphasis */
+    .btn.btn--primary {
+        background-color: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+    }
+
+    .btn.btn--primary:hover {
+        background-color: #2e5dc0;
+        border-color: #2e5dc0;
+        color: #fff;
+        box-shadow: 0 2px 10px rgba(46, 93, 192, 0.28);
     }
 
     ul.pub a {
         color: #3367d1;
+        text-underline-offset: 2px;
     }
 
     .bable {
@@ -140,43 +201,24 @@
     }
 
     /* mata-class */
-    .red {
-        color: red;
-    }
-
-    .bg-red {
-        background-color: red;
-    }
-
-    .green {
-        color: green;
-    }
-
-    .bg-green {
-        background-color: green;
-    }
-
-    .main {
-        color: #3367d1;
-    }
-
-    .bg-main {
-        background-color: #3367d1;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
+    .red { color: red; }
+    .bg-red { background-color: red; }
+    .green { color: green; }
+    .bg-green { background-color: green; }
+    .main { color: #3367d1; }
+    .bg-main { background-color: #3367d1; }
+    .bold { font-weight: bold; }
 
     /* common overrides */
     h2 {
-        margin: 30px 0 10px 0;
+        margin: 32px 0 12px 0;
     }
 
     a {
-        color: black;
+        color: #222;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 500;
+        transition: color .15s ease;
     }
 
     a:hover {
@@ -184,12 +226,34 @@
         text-decoration: underline;
     }
 
+    a:focus-visible, button:focus-visible {
+        outline: 3px solid rgba(51, 103, 209, 0.35);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
     p {
-        line-height: 1.25;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+
+    .info h3 {
+        margin: 0 0 6px 0;
+        color: #444;
+        font-weight: 600;
+    }
+
+    .info p {
+        margin: 6px 0;
+    }
+
+    ul.pub {
+        list-style: disc;
+        padding-left: 20px;
     }
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     @media screen and (max-width: 600px) {
@@ -204,13 +268,15 @@
             flex-direction: column;
             height: auto;
             margin: 20px auto;
+            align-items: flex-start;
+            gap: 16px;
         }
 
         header img {
             height: auto;
             max-height: 300px;
             max-width: 100%;
-            margin: 20px auto 20px 0;
+            margin: 12px auto 20px 0;
         }
 
         ul {
